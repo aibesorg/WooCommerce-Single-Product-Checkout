@@ -194,7 +194,7 @@ class WooCommerce_Single_Product_Checkout {
 
 if(! function_exists('is_plugin_active')){ require_once( ABSPATH . '/wp-admin/includes/plugin.php' ); }
     
-    if (is_plugin_active( 'woocommerce/woocommerce.php' )) {
+    if (is_plugin_active( 'woocommerce/woocommerce.php' ) || defined('WC_PLUGIN_FILE')) {
         
         if(! function_exists( 'WC_SPC' )){
             function WC_SPC(){ return WooCommerce_Single_Product_Checkout::get_instance(); }
